@@ -1,0 +1,26 @@
+
+
+.content {
+    width: 100%;
+    display: table;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto 0;
+    position: absolute;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.add {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 20px;
+}
+
+.title {
+    cursor: pointer;
+}

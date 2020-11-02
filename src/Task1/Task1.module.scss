@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.blackWrapper {
+    width: 57.9vw;
+    height: 36.53vw;    
+    background: linear-gradient(43.72deg, #000000 -15.77%, #363636 91.4%);
+    border-radius: 6.6vw;
+    position: relative;
+    border: 0.34vw solid #FFDACB;
+    
+    &__paragraph {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.6666vw;
+        line-height: 1.65;
+        color: #FFFFFF;
+        margin-bottom: 1.6666vw;
+        width: 44vw;
+
+        &:first-of-type {
+            margin-top: 1.9444vw;
+        }
+    }
+
+    &::after{
+        content:'';
+        display: flex;
+        height: 5.1vw;
+        width: 37.7vw;
+        background-color: #fff;
+        border: 0.34vw solid #FFDACB;
+        position: absolute;
+        top: -0.34vw;
+        left: 50%;
+        margin-left: -18.85vw;
+        border-top: none;
+
+        border-radius: 0 0 5.1vw 5.1vw;
+    }
+
+    &__block-scroll {
+        width: 47.91vw;
+        overflow-y: auto;
+        height: 100%;
+        padding: 0 0 0 6.666vw;
+        margin-top: 7.08vw;
+
+                &::-webkit-scrollbar {
+                    width: 0.41vw;
+                }
+        
+                &::-webkit-scrollbar-track {
+                    background: #484848;
+                    margin-bottom: 15vw;
+                }
+        
+                &::-webkit-scrollbar-thumb {
+                    background: #FFFFFF;
+                }
+    }
+}
+
+@media(max-width:589px) {
+    .blackWrapper {
+        width: 73.6vw;
+        height: 122.6vw;    
+        border-radius: 12.2vw;
+        border: 0.53vw solid #FFDACB;
+
+        &::after{
+            display: none;
+        }
+
+        &__paragraph {
+            font-size: 3.2vw;
+            line-height: 1.7;
+            margin-bottom: 4.2vw;
+            width: 54.4vw;
+    
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        &__block-scroll {
+            margin-top: 12.5vw;
+            padding: 0 0 0 8vw;
+            width: calc(100% - 11.7vw);
+
+            &::-webkit-scrollbar {
+                width: 1.066vw;
+            }
+                    
+            &::-webkit-scrollbar-track {
+                margin-bottom: 25vw;
+            }
+        }
+    }
+}
